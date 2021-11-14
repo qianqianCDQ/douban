@@ -1,0 +1,318 @@
+{
+	"info": {
+		"_postman_id": "a0491567-ee32-44e3-a3dc-d993de96b6e5",
+		"name": "qian",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Demo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var data1 = pm.response;\r",
+							"var data2 = pm.response.json();\r",
+							"\r",
+							"console.log(typeof data1);\r",
+							"console.log(data1);\r",
+							"\r",
+							"console.log(typeof data2);\r",
+							"console.log(data2);"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.douban.com/search?source=suggest&q=python",
+					"protocol": "https",
+					"host": [
+						"www",
+						"douban",
+						"com"
+					],
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "source",
+							"value": "suggest"
+						},
+						{
+							"key": "q",
+							"value": "python"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Postman-echo.com/get",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "12",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "file",
+					"file": {}
+				},
+				"url": {
+					"raw": "https://www.baidu.com",
+					"protocol": "https",
+					"host": [
+						"www",
+						"baidu",
+						"com"
+					]
+				},
+				"description": "请求描述"
+			},
+			"response": [
+				{
+					"name": "Postman-echo.com/get",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "12",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "file",
+							"file": {}
+						},
+						"url": {
+							"raw": "https://www.baidu.com",
+							"protocol": "https",
+							"host": [
+								"www",
+								"baidu",
+								"com"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Accept-Ranges",
+							"value": "bytes"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Content-Length",
+							"value": "227"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 14 Nov 2021 06:20:45 GMT"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Server",
+							"value": "BWS/1.1"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "BD_NOT_HTTPS=1; path=/; Max-Age=300"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=0"
+						},
+						{
+							"key": "Traceid",
+							"value": "1636870845054071706614276105953397503793"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "sameorigin"
+						},
+						{
+							"key": "X-Ua-Compatible",
+							"value": "IE=Edge,chrome=1"
+						}
+					],
+					"cookie": [],
+					"body": "<html>\n    <head>\n        <script>\r\n\t\tlocation.replace(location.href.replace(\"https://\",\"http://\"));\r\n\t</script>\n    </head>\n    <body>\n        <noscript>\n            <meta http-equiv=\"refresh\" content=\"0;url=http://www.baidu.com/\">\n        </noscript>\n    </body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "https://www.douban.com/search?source=suggest&q=python",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "digest",
+					"digest": [
+						{
+							"key": "algorithm",
+							"value": "MD5",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.douban.com/search?source=suggest&q=python",
+					"protocol": "https",
+					"host": [
+						"www",
+						"douban",
+						"com"
+					],
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "source",
+							"value": "suggest"
+						},
+						{
+							"key": "q",
+							"value": "python"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "env-variable",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "foo",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "postman-echo.com/{{path}}",
+					"host": [
+						"postman-echo",
+						"com"
+					],
+					"path": [
+						"{{path}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://www.baidu.com/?wd=123",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.baidu.com/?wd=123",
+					"protocol": "https",
+					"host": [
+						"www",
+						"baidu",
+						"com"
+					],
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "wd",
+							"value": "123"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
